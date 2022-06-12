@@ -1,0 +1,53 @@
+@import "_vars.scss";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+html {
+    height:100vh;
+    background: $bg;
+    @include defaultFont();
+}
+
+body {
+    min-height:100vh;
+    min-height: 100%;
+    box-sizing: border-box;
+
+    position: relative;
+
+    display:flex;
+    flex-direction: column;
+}
+
+//Required so g-images don't set their width as the actual image width.
+img {
+    width:unset;
+    object-fit:contain;
+}
+
+.link {
+    color:$text-colour;
+    text-decoration: none;
+    position:relative;
+    transition: 0.5s color ease;
+    &::after {
+        content:" ";
+        position: absolute;
+        left:0; bottom:0;
+        border-bottom: $border-style;
+        border-color: $highlight-colour;
+        width:0;
+        transition: 0.5s width ease;
+    }
+    &:hover {
+        color: $highlight-colour;
+        &::after {
+            width:100%;
+        }
+    }
+    &.active--exact {
+        color: $highlight-colour;
+        &::after {
+            width:100%;
+        }
+    }
+}

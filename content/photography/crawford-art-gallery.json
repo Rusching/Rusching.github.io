@@ -1,0 +1,16 @@
+{
+  "theme": "light",
+  "title": "Crawford Art Gallery",
+  "category": "Galleries & Artists",
+  "description": "Crawford Art Gallery is a national cultural institution in the heart of Cork city.",
+  "cover_image": "../../static/media/2020/09/20/kqzah64KwSlBMZ7cJAGf.jpg",
+  "images": [
+    "../../static/media/2020/09/20/9EtsNoSjCUy3CWIfbukV.jpg",
+    "../../static/media/2020/09/20/xnJem5SgshA26rvKyM2J.jpg",
+    "../../static/media/2020/09/20/0ezeJqgZzJsg286FN9kp.jpg",
+    "../../static/media/2020/09/20/aY2a39Ho4pbO3kDpul3z.jpg",
+    "../../static/media/2020/09/20/kqzah64KwSlBMZ7cJAGf.jpg",
+    "../../static/media/2020/09/20/pPgN5wfUCtgPmPCp403b.jpg",
+    "../../static/media/2020/09/20/RRMDCuxvBjMZBZLtXSyM.jpg"  
+  ]
+}
