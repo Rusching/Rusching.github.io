@@ -1,0 +1,153 @@
+---
+layout: page
+title: "上海夜"
+description: ""
+active: gallery
+header-img: "img/02-bg.jpeg"
+album-title: ""
+images:
+ - image_path: https://s2.loli.net/2022/03/16/ZnQkas2gcRGCjSx.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/G6MvN1wU5Xf3Lrq.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/NplXs7JoVEOjBud.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/FwY6eC1W35UgrA4.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/IBm8UPhoKEdWJpq.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/aMtkjurEBOhUJgb.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/yfEM7JRWgZhva94.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/omdPeG9VXLrQ6FU.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/dv1hVxalcziomyW.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/Yhbqi5KegTwLcU8.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/SKZL6H5p1BPsUA9.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/pESjTU2tMaAP4o6.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/7dHa6IJpkhsVDwN.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/Q31R7lyM9tPVXov.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/nqQ5MZwuXWtGJLj.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+ - image_path: https://s2.loli.net/2022/03/16/PY42I31KDNEyFAd.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+             return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

@@ -1,0 +1,164 @@
+---
+layout: page
+title: "虛構成像"
+description: "關心倒影，玻璃與不存在的現實"
+active: gallery
+header-img: "img/gallery-bg.jpg"
+album-title: ""
+images:
+ - image_path: https://s2.loli.net/2022/03/17/eKFhTmqlyf8dzHE.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/yWTDUtBXZhuaqjx.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/wgdyOxI3DP9QSmk.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/z3DG5AC9ecTrB6n.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/9asRqJMcv6pyu84.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/X5TzL2c1vlseinI.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/6aIuByZQwMot3Cz.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/VJ6hujA7NlYrQib.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/93LngzlIZ1brtcV.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/Esfcg3ODZb51CRr.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/JvMdrmS58XBxIuT.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/EFVKMxGUNZXSJ3H.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/O1rpefutCxjGElz.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/SFmJKzwXty2aj9c.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/PE6CGLydj5euhJU.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/iVrKWXdo6x1OLtD.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/z3LgWDpbO2VsrE6.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/WuYv1gjTLZ47fml.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>

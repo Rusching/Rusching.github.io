@@ -1,0 +1,174 @@
+---
+layout: page
+title: "上海晝"
+description: ""
+active: gallery
+header-img: "img/gallery-bg.jpg"
+album-title: ""
+images:
+ - image_path: https://s2.loli.net/2022/03/16/2MveNVo7QKEars3.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/16/TqDXnU6gepIOmZw.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/16/8SXiIYfG23Pu1hR.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/16/SuVGxMjzBwsDTfi.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/16/8saj95hw34kJQAc.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/16/kX1DRBSnUfqdvET.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/16/AkdhbGFIKlEwTQ8.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/16/DFHxCWsK4Am7pZ1.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/16/9hUluOeD4J7LTPS.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/16/Pdk2RAgBSVTjCEG.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/4P9HZVrOEkAghsY.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/qQ5RFjS2TXKv8Az.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/3opk7qKhRvy2MVw.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/p9crM4azRZKiVPQ.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/XDxgk1LyVpQsZrH.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/d5EZbQeBIWfPt2x.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/KcmaCtjiXB4qfDQ.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/9VJ1dnbwXPQqxul.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/nT1Or2YAEVhfXik.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/AFnRHT8k9VDSaKO.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+ - image_path: https://s2.loli.net/2022/03/17/lUcbn8sZmN3YoVO.jpg
+   caption: IMAGE TITLE
+   mfp-title: IMAGE TITLE
+   copyright: © Heterogeneous Imaging'
+
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+             return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

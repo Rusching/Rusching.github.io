@@ -1,30 +1,22 @@
 {
-  "name": "joshua-rainbow",
-  "private": true,
+  "name": "photorama",
+  "version": "1.0.0",
+  "description": "Theme by [Start Bootstrap](http://startbootstrap.com/).",
+  "main": "Gruntfile.js",
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunbliss/photorama.git"
+  },
+  "author": "Anna Prigkipaki",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sunbliss/photorama/issues"
+  },
+  "homepage": "http://sunbliss.github.io",
   "dependencies": {
-    "@gridsome/plugin-google-analytics": "^0.1.2",
-    "@gridsome/plugin-sitemap": "^0.2.3",
-    "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-json": "^0.2.1",
-    "@gridsome/transformer-remark": "^0.6.4",
-    "axios": "^0.26.1",
-    "gh-pages": "^2.2.0",
-    "gridsome": "^0.7.23",
-    "gridsome-cli": "0.0.1",
-    "gridsome-plugin-ogp": "0.0.14",
-    "vue-axios": "^2.1.5"
-  },
-  "devDependencies": {
-    "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2",
-    "style-resources-loader": "^1.5.0",
-    "vue-svg-loader": "^0.16.0"
+    "searchkit": "^0.7.0"
   }
 }

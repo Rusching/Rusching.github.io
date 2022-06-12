@@ -1,0 +1,114 @@
+---
+layout: page
+title: "影集"
+description: "這裏陳列著所有的照片"
+active: gallery
+header-img: "img/photo-bg.jpeg"
+images:
+ - image_path: /gallery/albums/DSC_5144.jpeg
+   gallery-folder: /gallery/gallery01/
+   gallery-name: 上海晝
+   gallery-date: 2021
+ - image_path: /gallery/albums/DSC_4684.jpeg
+   gallery-folder: /gallery/gallery02/
+   gallery-name: 上海夜
+   gallery-date: 2021
+ - image_path: /gallery/albums/IMG_8684.jpeg
+   gallery-folder: /gallery/gallery03/
+   gallery-name: 肖像
+   gallery-date: 2021
+ - image_path: /gallery/albums/DSC_6221.jpeg
+   gallery-folder: /gallery/gallery04/
+   gallery-name: 虛構成像
+   gallery-date: 2021
+ - image_path: /gallery/albums/IMAG0278_1.jpg
+   gallery-folder: /gallery/gallery05/
+   gallery-name: 線
+   gallery-date: 2018
+ - image_path: /gallery/albums/DSC_7157.jpeg
+   gallery-folder: /gallery/gallery06/
+   gallery-name: 遺忘
+   gallery-date: 2022
+ - image_path: /gallery/albums/IMG_9369.jpg
+   gallery-folder: /gallery/gallery07/
+   gallery-name: 貓
+   gallery-date: 2018
+ - image_path: /gallery/albums/DSC_7403.jpeg
+   gallery-folder: /gallery/gallery08/
+   gallery-name: 褪色
+   gallery-date: 2022
+ - image_path: /gallery/albums/DSC_9153.jpeg
+   gallery-folder: /gallery/gallery09/
+   gallery-name: 山水
+   gallery-date: 2022
+ - image_path: /gallery/albums/DSC_8262.jpeg
+   gallery-folder: /gallery/gallery10/
+   gallery-name: 晴天
+   gallery-date: 2021
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+    <link rel="stylesheet" href="{{ "/css/selena.css" | prepend: site.baseurl }}">
+</head>
+
+
+    <body class="gallery">
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	
+			<h2>{{page.title}}</h2>
+			
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+				
+{% for image in page.images %}  	
+
+
+	               <figure class="gallery-item">
+                         <figure class="effect-selena">
+					<header class='gallery-icon'>
+		       
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.gallery-folder }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.gallery-name}}</h3>
+							<p>{{image.gallery-date}}</p>
+						</div>
+					</figcaption>
+                       </figure>
+				</figure>
+							
+{% endfor %}		
+				
+			</div>
+			
+		</div><!-- END .wrapper -->
+	</section>
+
+
+<br>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+</body></html>
